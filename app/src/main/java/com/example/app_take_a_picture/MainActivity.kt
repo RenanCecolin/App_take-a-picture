@@ -94,6 +94,24 @@ class MainActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
 
+                    val uploadResponse = response.body()
+
+                    if (uploadResponse?.itens?.isEmpty() == true) {
+
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Nenhum alimento reconhecido na foto. Tente novamente!",
+                            Toast.LENGTH_LONG
+                        ).show()
+
+                    } else {
+
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Alimentos salvos na geladeira!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 } else {
 
                     Toast.makeText(

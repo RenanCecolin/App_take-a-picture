@@ -13,5 +13,18 @@ interface ApiService {
     @POST("api/fridge/1/items/upload-image/")
     suspend fun uploadImage(
         @Part image: MultipartBody.Part
-    ): Response<ResponseBody>
+    ): Response<UploadResponse>
 }
+
+data class UploadResponse(
+    val message: String? = null,
+    val total_detectado: Int = 0,
+    val itens: List<ItemGeladeira> = emptyList()
+)
+
+data class ItemGeladeira(
+    val id: Int,
+    val name: String,
+    val quantity: Double,
+    val category: String
+)
