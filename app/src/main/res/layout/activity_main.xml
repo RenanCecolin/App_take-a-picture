@@ -7,11 +7,34 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <LinearLayout
+        android:id="@+id/layoutSetup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pareamento da Geladeira"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnScanQr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escanear QR Code"/>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnTakePicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tirar_foto"/>
+        android:text="@string/tirar_foto"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/imageView"
